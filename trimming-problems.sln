@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trimming-problems", "trimming-problems\trimming-problems.csproj", "{5924F124-894D-4ACA-8269-C0132A321545}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Java.Interop.Example", "Java.Interop.Example\Java.Interop.Example.csproj", "{67EECD08-AD9A-474E-BE84-C70AECBBC9C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5924F124-894D-4ACA-8269-C0132A321545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5924F124-894D-4ACA-8269-C0132A321545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5924F124-894D-4ACA-8269-C0132A321545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67EECD08-AD9A-474E-BE84-C70AECBBC9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67EECD08-AD9A-474E-BE84-C70AECBBC9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67EECD08-AD9A-474E-BE84-C70AECBBC9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67EECD08-AD9A-474E-BE84-C70AECBBC9C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
