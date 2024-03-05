@@ -49,4 +49,13 @@ public static class JavaArrayCreator
 		}
 		return array;
 	}
+
+	public static void Fill(Array array)
+	{
+		var type = GetElementType(array.GetType());
+		for (int i = 0; i < array.Length; i++)
+		{
+			array.SetValue(Activator.CreateInstance(type), i);
+		}
+	}
 }
