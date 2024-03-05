@@ -1,5 +1,8 @@
-﻿namespace Java.Interop;
+﻿using System.Diagnostics.CodeAnalysis;
 
+namespace Java.Interop;
+
+[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)]
 public class JavaObject
 {
 	/// <summary>
