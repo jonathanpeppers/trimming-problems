@@ -48,6 +48,10 @@ public static class JavaArrayCreator
 		{
 			type = GetElementType(type);
 		}
+		if (type.IsEnum)
+		{
+			type = Enum.GetUnderlyingType(type);
+		}
 		var array = CreateArray(type, length);
 		for (int i = 0; i < length; i++)
 		{

@@ -10,11 +10,11 @@ const int length = 3;
 // 	Console.WriteLine(item is null);
 // }
 
-var array2 = JavaArrayCreator.Create(typeof(JavaObject[]), length);
+var array2 = JavaArrayCreator.Create(typeof(SomeEnum), length);
 Console.WriteLine(array2.Length);
 foreach (var item in array2)
 {
-	Console.WriteLine(item is null);
+	Console.WriteLine(item.ToString());
 }
 
 // Another example:
@@ -25,3 +25,10 @@ foreach (var item in array2)
 // {
 // 	Console.WriteLine(item is null);
 // }
+
+enum SomeEnum
+{
+	A,
+	B,
+	C
+}
