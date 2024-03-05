@@ -26,3 +26,16 @@ foreach (var item in array2)
     Console.WriteLine(item is null);
 }
 ```
+
+If you use the second API, `JavaObject`'s ctor can get trimmed away:
+```csharp
+Unhandled exception. System.MissingMethodException: Cannot dynamically create an instance of type 'Java.Interop.JavaObject'. Reason: No parameterless constructor defined.
+   at System.RuntimeType.ActivatorCache..ctor(RuntimeType)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean, Boolean)
+   at System.Activator.CreateInstance(Type, Boolean, Boolean)
+   at System.Activator.CreateInstance(Type , Boolean)
+   at System.Activator.CreateInstance(Type )
+   at Java.Interop.JavaArrayCreator.Create(Type , Int32) in D:\src\trimming-problems\Java.Interop.Example\JavaArrayCreator.cs:line 54
+   at Program.<Main>$(String[]) in D:\src\trimming-problems\trimming-problems\Program.cs:line 13
+```
+
