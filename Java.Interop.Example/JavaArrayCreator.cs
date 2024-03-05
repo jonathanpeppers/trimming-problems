@@ -38,6 +38,12 @@ public static class JavaArrayCreator
 			Type type,
 			int length)
 	{
+		// If we generated this code, it would work
+		// if (type == typeof(JavaObject[]))
+		// {
+		// 	return Create<JavaObject>(length);
+		// }
+
 		if (type.IsArray)
 		{
 			type = GetElementType(type);
