@@ -33,11 +33,14 @@ public static class JavaArrayCreator
 			Type type,
 			int length)
 	{
-		var elementType = type.GetElementType();
-		var array = CreateArray(elementType, length);
+		if (type.IsArray)
+		{
+			type = type.GetElementType();
+		}
+		var array = CreateArray(type, length);
 		for (int i = 0; i < length; i++)
 		{
-			array.SetValue(Activator.CreateInstance(elementType), i);
+			array.SetValue(Activator.CreateInstance(type), i);
 		}
 		return array;
 	}
