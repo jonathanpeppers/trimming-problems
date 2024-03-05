@@ -8,6 +8,11 @@ public static class JavaArrayCreator
 	static Array CreateArray(Type type, int length) =>
 		Array.CreateInstance(type, length);
 
+	[return: DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicParameterlessConstructor)]
+	static Type GetElementType(Type type) =>
+		type.GetElementType() ??
+		throw new InvalidOperationException($"Type '{type}' does not have an element type!");
+
 	/// <summary>
 	/// Creates an Array of the specified type and length, and initializes each element with a new instance of the type.
 	/// </summary>
@@ -35,7 +40,7 @@ public static class JavaArrayCreator
 	{
 		if (type.IsArray)
 		{
-			type = type.GetElementType();
+			type = GetElementType(type);
 		}
 		var array = CreateArray(type, length);
 		for (int i = 0; i < length; i++)
